@@ -5,6 +5,7 @@
 <form
   method="POST"
   action="https://api.manimbooks.kush.in/new_book"
+  enctype="multipart/form-data"
   class="grid gap-2"
 >
   <label for="book_title">
