@@ -1,16 +1,14 @@
 <script lang="ts">
   export let data: any;
   import Card from "$lib/card.svelte";
-  function ger_cover_url(name: string, author: string) {
-    return `https://api.manimbooks.kush.in/raw/uploads/${author}/${name}/cover.png`;
-  }
 </script>
 
-<h2 class="p-16 font-bold">Recent Uploads</h2>
-<div class="container gap-1 h-full mx-auto grid justify-center items-center">
+<h2 class="p-8 font-bold">Recent Uploads</h2>
+<div class="container gap-8 h-auto m-auto p-2 grid justify-center">
   {#each data.books as book}
     <Card
-      cover_url={ger_cover_url(book.bookName, book.author)}
+      id={book.id}
+      cover_url={book.cover}
       title={book.bookName}
       author={book.author}
     />

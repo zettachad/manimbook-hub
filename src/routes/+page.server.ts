@@ -1,10 +1,5 @@
-import { error } from "@sveltejs/kit";
-export async function load() {
-  const response = await fetch("https://api.manimbooks.kush.in/get_books");
-  const data = await response.json();
-  if (!data) {
-    return error(404, "Not found");
-  }
-  console.log(data);
-  return { books: data };
+import type { PageServerLoad } from "./$types";
+export const load: PageServerLoad = async ({ fetch }) => {
+  const books = fetch("/api/getBooks").then((r) => r.json());
+  return { books: books };
 }

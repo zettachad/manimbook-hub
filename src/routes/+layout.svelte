@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "@skeletonlabs/skeleton/themes/theme-rocket.css";
+  import "@skeletonlabs/skeleton/themes/theme-seasonal.css";
   import "@skeletonlabs/skeleton/styles/all.css";
   import "../app.postcss";
   import { AppShell, AppBar } from "@skeletonlabs/skeleton";
@@ -30,7 +30,7 @@
       </svelte:fragment>
       <svelte:fragment slot="trail">
         <button
-          class="btn btn-sm btn-ghost-surface"
+          class="btn-ghost-primary btn btn-lg"
           on:keypress={() => triggerForm()}
           on:click={() => triggerForm()}>Upload</button
         >

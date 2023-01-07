@@ -2,9 +2,15 @@
   export let cover_url: string;
   export let title: string;
   export let author: string;
+  export let id: string;
+  // open book on click
+  const openBook = () => {
+    window.open(`/${id}`, "_blank");
+  };
 </script>
 
-<div class="card">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div on:click={() => openBook()} class="card">
   <img class="h-full w-full object-cover" src={cover_url} alt="Book Cover" />
   <div class="info">
     <h3 class="text-xl font-bold">{title}</h3>
