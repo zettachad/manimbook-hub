@@ -1,1 +1,1 @@
-We're working with the frontend deployment, please wait
+Please wait till we solve environment variable issues
