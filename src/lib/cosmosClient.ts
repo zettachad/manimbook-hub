@@ -1,8 +1,8 @@
 import { CosmosClient } from "@azure/cosmos";
 import { env } from "$env/dynamic/private"
 
-const endpoint = env.ENDPOINT;
-const key = env.KEY;
+const endpoint = process.env.ENDPOINT;
+const key = process.env.KEY;
 
 if (!endpoint) {
     throw new Error("No endpoint found");
